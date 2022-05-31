@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de verduras</title>
+</head>
+<body>
+    <script src="tiendaDeVerduras.js"></script>
+    <link href="tiendaDeVerduras.css" rel="stylesheet" type="text/css">
+    <button id="pruebame" onclick="hablar(texto)">Pruebame ciego</button>
+    <h1>Tiendita del Ciego</h1>
+
+    <button id="verInventario" onclick="abrirInventario()">Inventario</button>
+    <button id="modificaProducto" onclick="abrirModificarProducto()" >Modifica producto</button>
+    <button id="agregarProducto" onclick="abrirAgregarProducto()">Agregar Producto</button>
+    <button id="comprarProducto" onclick="abrirComprarProducto()">Comprar  Producto</button>
+    <button id="venderProducto" onclick="abrirVenderProducto()">Vender Producto</button>
+
+    
+    <div class="ventana0" id="ventanaInventario">
+        <h2>Inventario</h2>     
+        <div class="cerrar"><a onclick="cerrar0()"><img src="error.png" width="25" height="25" ></a></div>
+        
+    </div>
+    
+    <div class="ventana1" id="ventanaModificarProducto">
+        <h2> Modificar Producto </h2>
+        <div class="cerrar"><a onclick="cerrar1()"><img src="error.png" width="25" height="25" ></a></div>
+
+         
+    </div> 
+    
+    <div class="ventana2" id="ventanaAgregarProducto">
+        <h2> Agregar Producto</h2>
+        <div class="cerrar"><a onclick="cerrar2()"><img src="error.png" width="25" height="25" ></a></div>
+        <input type="text" name="txtProducto" id="Producto">
+        <p id="Inventario"></p>
+        <button type="button" id="btnAgregar" onclick="agregar()">Agregar</button><br></br> 
+        <h2> Eliminar Producto</h2>
+        <label for="cars">Selecciona un producto:</label>
+            <select  id="productoEliminar"></select>
+        <p></p>
+        <button type="button" id="btnEliminar" onclick="elminarProducto()">Eliminar</button><br></br>
+
+    </div>
+    
+    <div class="ventana3" id="ventanaComprarProducto">
+        <h2>Comprar Producto</h2>
+        <div class="cerrar"><a onclick="cerrar3()"><img src="error.png" width="25" height="25" ></a></div>
+        
+    </div> 
+    
+    <div class="ventana4" id="ventanaVenderProducto">
+        <h2> Vender Producto</h2>
+        <div class="cerrar"><a onclick="cerrar4()"><img src="error.png" width="25" height="25" ></a></div>
+        
+    </div> 
+    
+    <div id="date"></p>
+    <body background="WAIFU.png"></body>
+       
+    <header></header>
+    <nav></nav>
+</body>
+</html>
