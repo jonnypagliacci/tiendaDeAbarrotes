@@ -12,18 +12,30 @@ Se debe poder vender mas de un producto y al final dar el total de la venta o co
 
 Menu con opciones
 
-1.- Compra
-2.- Venta
-3.- Modificar productos
-4.- Ver inventario
-5.- Agregar productos
-
+1.- Ver inventario
+2.- Modificar productos
+3.- Agregar productos
+4.- Compra
+5.- Venta
 */
 
 
 // Variables
-const inventario = [];
-inventario.sort();
+const inventario = [
+  {
+    nombre:'coca',
+    precio:10.00,
+    cantidad: 5
+  }, {
+    nombre:'chocolate',
+    precio:15.00,
+    cantidad: 25
+  }, {
+    nombre:'leche',
+    precio:30.00,
+    cantidad: 9
+  }
+];
 
 
 // Función para desplegar inventario.
@@ -45,20 +57,28 @@ function agregar(){
     }else{
         window.confirm(`Está seguro que quiere agregar el producto "${$producto}"?.`);
         window.alert(`El producto ${$producto} fue agregado correctamente`);
-        inventario.push($producto);
+        inventario.push({nombre: $producto, precio: 10, cantidad: 2});
         console.log(inventario);
-        $opciones.innerHTML += `<option>${$producto}</option>`;
+        $opciones.innerHTML += `<option value="${$producto}">${$producto}</option>`;
    
     }
 }
 
 // Función eliminar prodcuto.
 
-function elminarProducto(){
+function eliminarProducto(){
 
     for (let index = 0; index < array.length; index++) {
         const element = array[index];
         let $productos2 /////////// continuación.
+        /* 
+        let $opciones = document.getElementById("productoEliminar").value
+        for (let index=0; index < array.length; index++) {
+          if ($opciones === array[index].nombre) {
+            array[index].pop()
+          }
+        }
+        */
         if (opcion === element) {
             inventario.pop(element);
         }
@@ -109,9 +129,9 @@ document.write(date);
 
 // Saludos para el ciego.
 
-let texto = "Hola ciego, puedes probar mi aplicación para abarrotes, jaja saludos culebra.";
+/*let texto = "Hola ciego, puedes probar mi aplicación para abarrotes, jaja saludos culebra.";
 
 const hablar = (texto) => speechSynthesis.
 speak(new SpeechSynthesisUtterance(texto));
-hablar(texto);
+hablar(texto);*/
 
